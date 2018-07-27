@@ -8,6 +8,10 @@
 require 'open-uri'
 require 'json'
 
+Dose.delete_all
+Ingredient.delete_all
+Cocktail.delete_all
+
 # Ingredient.delete_all
 # puts "Deleted all ingredients"
 

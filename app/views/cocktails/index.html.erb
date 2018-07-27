@@ -6,7 +6,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class = "col-xs-4">
         <div class="flat-card">
-          <div class = 'flat-img' style = "background-image: url(<%= cl_image_tag cocktail.photo, class: 'image' %>);"></div>
+          <div class='flat-img' style="background-image: url('<%= cl_image_path cocktail.photo %>');"></div>
           <div class = 'flat-text'>
             <h3 class = 'flat-name'> <%= cocktail.name %> </h3>
             <p class = 'flat-description'> Description: <%= cocktail.description %> </p>
