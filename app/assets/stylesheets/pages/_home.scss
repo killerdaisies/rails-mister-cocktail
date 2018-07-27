@@ -1,7 +1,6 @@
 // Specific CSS for your home-page
 .container {
   width: 100vw;
-  background-color: #08272e;
   padding-top: 20px;
   padding-left: 20px ;
   padding-right: 20px ;
@@ -36,3 +35,75 @@
 //   opacity: 0.6;
 //   margin-bottom: 30px;
 // }
+
+#header {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.flat-card {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+  width: 350px;
+  margin-top: 20px;
+}
+body {
+  // border: 5px solid red;
+  background-color: #FFF;
+}
+// .flat {
+//   box-shadow: 0 5px 3px 0 rgba(0,0,0,0.14), 0 5px 3px 0 rgba(0,0,0,0.12), 0 1px 1px -2px rgba(0,0,0,0.2);
+//   padding: 0px;
+//   margin: 2.5px 2.5px;
+//   width: 200px;
+// }
+.flat-img {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+}
+.flat-text{
+  background-color: #F8F9FA;
+  // border: 5px solid green;
+  width: 100%;
+  margin: auto 0;
+  padding: 10px;
+  padding-bottom: 5px;
+  h3 {
+    margin-top: 0px;
+    padding-top: 5px;
+  }
+}
+.flat-text-symbols {
+  // border: 5px solid red;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.flat-price {
+  padding-right: 5px;
+  margin-right: 15px;
+}
+.flat-footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgb(230, 230, 230);
+  align-items: center;
+  padding-top: 5px;
+}
+.flat-info a {
+  color: #0C57B2;
+}
+.flat-edit a {
+  color: #D39D37;
+}
+.flat-remove a {
+  color: #BB2633;
+}
+.flat-text {
+  font-size: 12px;
+  h3 {
+    font-size: 18px;
+  }
+}
+.flat-text-symbols {
+  font-size: 16px;
+}

@@ -1,13 +1,36 @@
 <%= cl_image_tag @cocktail.photo, class: "image"  %>
-<div class= "page-container">
-  <h1><%= @cocktail.name %></h1>
-  <p> <%= @cocktail.description %> </p>
-  <h3>Ingredients</h3>
-  <% @doses.each do |dose| %>
-    <p> <%= dose.description %> | <%= Ingredient.find(dose.ingredient_id).name %> <%= link_to "delete", dose_path(dose), method: :delete %></p>
-  <% end %>
-  <p> <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail)  %> </p>
-  <p> <%= link_to "Back to all cocktails", cocktails_path %> </p>
-  <p> <%= link_to "edit", edit_cocktail_path(@cocktail) %> </p>
-  <p> <%= link_to "delete", cocktail_path(@cocktail), method: :delete %> </p>
+<body id = 'show-body'>
+  <div class = 'container'>
+    <div class = 'row'>
+      <div class = 'col-xs-8'>
+        <div class = 'flat-show' >
+          <div class = 'flat-show-text'>
+            <h3> <%= @cocktail.name %> </h3>
+            <h5> <%= @cocktail.description %> </h5>
+          </div>
+        </div>
+      </div>
+      <div class = 'col-xs-4'>
+        <div class = 'flat-show'>
+          <div class = 'flat-show-title'>
+            <h3> Ingredients </h3>
+            <p id = 'dose-padding'><%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail)  %> </p>
+          </div>
+          <div class = 'flat-show-text' id = 'doses-alignment'>
+            <% @doses.each do |dose| %>
+              <p> <%= dose.description %> <%= Ingredient.find(dose.ingredient_id).name %> <%= link_to "delete", dose_path(dose), method: :delete %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class = 'col-xs-4'>
+        <div class = 'flat-show' id = 'show-links'>
+          <p> <%= link_to "Back", cocktails_path %> </p>
+          <p> <%= link_to "Edit", edit_cocktail_path(@cocktail) %> </p>
+          <p> <%= link_to "Delete", cocktail_path(@cocktail), method: :delete %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</body>
