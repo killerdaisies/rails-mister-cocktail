@@ -1,4 +1,10 @@
 <div class="banner" style="background-image: url('https://images.unsplash.com/photo-1504670482337-6863551c6f55?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=60383aeb54a3cbd56dcf5fe1753a01d8&auto=format&fit=crop&w=1950&q=80');">
+  <div class = "banner-ds">
+    <h1>  </h1>
+    <h1>  </h1>
+    <h1> Mister Cocktail </h1>
+    <%= link_to "Go on add a cocktail", new_cocktail_path, class: "btn btn-danger" %>
+  </div>
 </div>
 <h1 id = "header"> All Cocktails </h1>
 <div class = "container">
@@ -15,12 +21,11 @@
           </div>
           <div class = 'flat-footer'>
             <p class = 'flat-info'> <%= link_to 'More info', cocktail_path(cocktail)%> </p>
-            <p class = 'flat-edit'> <%= link_to 'Edit', cocktail_path(cocktail)%> </p>
-            <p class = 'flat-remove'> <%= link_to 'Remove', cocktail_path(cocktail) %> </p>
+            <p class = 'flat-edit'> <%= link_to 'Edit', edit_cocktail_path(cocktail)%> </p>
+            <p class = 'flat-remove'> <%= link_to 'Remove', cocktail_path(cocktail), method: :delete %> </p>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-<%= link_to "Go on add a cocktail", new_cocktail_path, class: "btn btn-danger" %>
