@@ -1,7 +1,27 @@
-<h1> All Cocktails </h1>
-<div cocktail-container>
-  <% @cocktails.each do |cocktail| %>
-  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-  <% end %>
+<div class= "page-container">
+  <div class="banner-container">
+    <div class="banner" style="background-image: url('https://images.unsplash.com/photo-1504670482337-6863551c6f55?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=60383aeb54a3cbd56dcf5fe1753a01d8&auto=format&fit=crop&w=1950&q=80');">
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card-descrip">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-category">Popular</div>
+              <div class="card-description">
+                <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+                <p><%= cocktail.description %></p>
+              </div>
+              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger"><%= link_to "Go on add a cocktail", new_cocktail_path %></button>
 </div>
-<p><%= link_to "Go on add a cocktail", new_cocktail_path %></p>
+
+
